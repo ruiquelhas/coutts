@@ -1,5 +1,16 @@
 # Changelog
 
+## [v3.0.0](https://github.com/ruiquelhas/coutts/tree/v3.0.0) (2016-04-03)
+[Full Changelog](https://github.com/ruiquelhas/coutts/compare/v2.0.0...v3.0.0)
+
+**Closed issues:**
+
+- Update fischbacher to version 2.x.x [\#4](https://github.com/ruiquelhas/coutts/issues/4)
+
+**Merged pull requests:**
+
+- Update dependencies [\#5](https://github.com/ruiquelhas/coutts/pull/5) ([ruiquelhas](https://github.com/ruiquelhas))
+
 ## [v2.0.0](https://github.com/ruiquelhas/coutts/tree/v2.0.0) (2016-02-22)
 [Full Changelog](https://github.com/ruiquelhas/coutts/compare/v1.0.0...v2.0.0)
 
