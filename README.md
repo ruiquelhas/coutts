@@ -6,7 +6,6 @@ Like most modern magicians, builds on the work, knowledge and influence of other
 [![NPM Version][fury-img]][fury-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Dependencies][david-img]][david-url]
 
 ## Table of Contents
-
 - [Installation](#installation)
 - [Usage](#usage)
   - [Example](#example)
@@ -20,7 +19,6 @@ $ npm install coutts
 ```
 
 ## Usage
-
 Register the package as a server plugin to enable validation for each route that does not parse — `parse: false` — into a temporary file, the request payload — `output: 'file'`. For every other route with a different configuration, the validation is skipped.
 
 If the validation fails, a [joi](https://github.com/hapijs/joi)-like `400 Bad Request` error is returned alongside an additional `content-validation: failure` response header. If everything is ok, the response will ultimately contain a `content-validation: success` header.
@@ -42,7 +40,7 @@ const plugin = {
     register: Coutts,
     options: {
       // Allow png files only
-      whitelist: ['png']
+      whitelist: ['image/png']
     }
 };
 
@@ -65,8 +63,7 @@ server.register(plugin, (err) => {
 ```
 
 ## Supported File Types
-
-The same as [magik](https://github.com/ruiquelhas/magik#supported-file-types).
+The same as [file-type](https://github.com/sindresorhus/file-type#supported-file-types).
 
 [coveralls-img]: https://coveralls.io/repos/ruiquelhas/coutts/badge.svg
 [coveralls-url]: https://coveralls.io/github/ruiquelhas/coutts
