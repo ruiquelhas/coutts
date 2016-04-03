@@ -27,7 +27,7 @@ lab.experiment('coutts', () => {
         const plugin = {
             register: Coutts,
             options: {
-                whitelist: ['png']
+                whitelist: ['image/png']
             }
         };
 
@@ -68,10 +68,10 @@ lab.experiment('coutts', () => {
 
     lab.test('should return control to the server if the route parses or does not handle stream request payloads', (done) => {
 
-        server.inject({ method: 'POST', url: '/ignore' }, (response) => {
+        server.inject({ method: 'POST', payload: {}, url: '/ignore' }, (response) => {
 
             Code.expect(response.statusCode).to.equal(200);
-            Code.expect(response.headers['content-validation']).to.not.exist();
+            Code.expect(response.headers['content-validation']).to.equal('success');
             Code.expect(response.headers['content-type']).to.not.exist();
             done();
         });
@@ -87,7 +87,7 @@ lab.experiment('coutts', () => {
             server.inject({ headers: form.getHeaders(), method: 'POST', payload: payload, url: '/main' }, (response) => {
 
                 Code.expect(response.statusCode).to.equal(200);
-                Code.expect(response.headers['content-validation']).to.not.exist();
+                Code.expect(response.headers['content-validation']).to.equal('success');
                 Code.expect(Content.type(response.headers['content-type']).mime).to.equal('application/json');
                 Code.expect(response.result).to.include(['path', 'bytes']);
                 done();
@@ -98,7 +98,7 @@ lab.experiment('coutts', () => {
     lab.test('should return error if the payload cannot be parsed', (done) => {
 
         const png = Path.join(Os.tmpdir(), 'foo.png');
-        Fs.createWriteStream(png).end(new Buffer([0x89, 0x50]));
+        Fs.createWriteStream(png).end(new Buffer('89504e47', 'hex'));
 
         const form = new FormData();
         form.append('file', Fs.createReadStream(png));
@@ -119,7 +119,7 @@ lab.experiment('coutts', () => {
     lab.test('should return control to the server if all files the in payload are allowed', (done) => {
 
         const png = Path.join(Os.tmpdir(), 'foo.png');
-        Fs.createWriteStream(png).end(new Buffer([0x89, 0x50]));
+        Fs.createWriteStream(png).end(new Buffer('89504e47', 'hex'));
 
         const form = new FormData();
         form.append('file1', Fs.createReadStream(png));
