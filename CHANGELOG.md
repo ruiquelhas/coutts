@@ -1,5 +1,12 @@
 # Changelog
 
+## [v3.0.1](https://github.com/ruiquelhas/coutts/tree/v3.0.1) (2016-05-28)
+[Full Changelog](https://github.com/ruiquelhas/coutts/compare/v3.0.0...v3.0.1)
+
+**Merged pull requests:**
+
+- Update dependencies [\#6](https://github.com/ruiquelhas/coutts/pull/6) ([ruiquelhas](https://github.com/ruiquelhas))
+
 ## [v3.0.0](https://github.com/ruiquelhas/coutts/tree/v3.0.0) (2016-04-03)
 [Full Changelog](https://github.com/ruiquelhas/coutts/compare/v2.0.0...v3.0.0)
 
