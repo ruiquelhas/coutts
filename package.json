@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/ruiquelhas/coutts#readme",
   "devDependencies": {
-    "code": "2.x.x",
+    "code": "3.x.x",
     "content": "3.x.x",
     "coveralls": "2.x.x",
     "form-data": "0.x.x",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "fischbacher": "2.x.x",
-    "hoek": "3.x.x",
+    "hoek": "4.x.x",
     "recourier": "1.x.x",
     "subtext": "4.x.x"
   },
