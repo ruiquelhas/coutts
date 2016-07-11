@@ -1,5 +1,16 @@
 # Changelog
 
+## [v3.0.2](https://github.com/ruiquelhas/coutts/tree/v3.0.2) (2016-07-11)
+[Full Changelog](https://github.com/ruiquelhas/coutts/compare/v3.0.1...v3.0.2)
+
+**Closed issues:**
+
+- Simplify test suite [\#7](https://github.com/ruiquelhas/coutts/issues/7)
+
+**Merged pull requests:**
+
+- Update test suite to use stream payloads [\#8](https://github.com/ruiquelhas/coutts/pull/8) ([ruiquelhas](https://github.com/ruiquelhas))
+
 ## [v3.0.1](https://github.com/ruiquelhas/coutts/tree/v3.0.1) (2016-05-28)
 [Full Changelog](https://github.com/ruiquelhas/coutts/compare/v3.0.0...v3.0.1)
 
