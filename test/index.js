@@ -81,7 +81,7 @@ lab.experiment('coutts', () => {
         const form = new Form();
         form.append('foo', 'bar');
 
-        server.inject({ headers: form.getHeaders(), method: 'POST', payload: form.get(), url: '/main' }, (response) => {
+        server.inject({ headers: form.getHeaders(), method: 'POST', payload: form.stream(), url: '/main' }, (response) => {
 
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(response.headers['content-validation']).to.equal('success');
@@ -99,7 +99,7 @@ lab.experiment('coutts', () => {
         const form = new Form();
         form.append('file', Fs.createReadStream(png));
 
-        server.inject({ headers: { 'Content-Type': 'application/json' }, method: 'POST', payload: form.get(), url: '/main' }, (response) => {
+        server.inject({ headers: { 'Content-Type': 'application/json' }, method: 'POST', payload: form.stream(), url: '/main' }, (response) => {
 
             Code.expect(response.statusCode).to.equal(415);
             Code.expect(response.headers['content-validation']).to.not.exist();
@@ -119,7 +119,7 @@ lab.experiment('coutts', () => {
         form.append('file2', Fs.createReadStream(png));
         form.append('foo', 'bar');
 
-        server.inject({ headers: form.getHeaders(), method: 'POST', payload: form.get(), url: '/main' }, (response) => {
+        server.inject({ headers: form.getHeaders(), method: 'POST', payload: form.stream(), url: '/main' }, (response) => {
 
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(response.headers['content-validation']).to.equal('success');
