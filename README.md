@@ -3,7 +3,7 @@ File type validation for [hapi](https://github.com/hapijs/hapi) raw temporary fi
 
 Like most modern magicians, builds on the work, knowledge and influence of others before it, in this case, [fischbacher](https://github.com/ruiquelhas/fischbacher).
 
-[![NPM Version][fury-img]][fury-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Dependencies][david-img]][david-url]
+[![NPM Version][version-img]][version-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Dependencies][david-img]][david-url] [![Dev Dependencies][david-dev-img]][david-dev-url]
 
 ## Table of Contents
 - [Installation](#installation)
@@ -62,11 +62,13 @@ catch (err) {
 ## Supported File Types
 The same as [file-type](https://github.com/sindresorhus/file-type/tree/v7.0.0#supported-file-types).
 
-[coveralls-img]: https://coveralls.io/repos/ruiquelhas/coutts/badge.svg
+[coveralls-img]: https://img.shields.io/coveralls/ruiquelhas/coutts.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/github/ruiquelhas/coutts
-[david-img]: https://david-dm.org/ruiquelhas/coutts.svg
+[david-img]: https://img.shields.io/david/ruiquelhas/coutts.svg?style=flat-square
 [david-url]: https://david-dm.org/ruiquelhas/coutts
-[fury-img]: https://badge.fury.io/js/coutts.svg
-[fury-url]: https://badge.fury.io/js/coutts
-[travis-img]: https://travis-ci.org/ruiquelhas/coutts.svg
+[david-dev-img]: https://img.shields.io/david/dev/ruiquelhas/coutts.svg?style=flat-square
+[david-dev-url]: https://david-dm.org/ruiquelhas/coutts?type=dev
+[version-img]: https://img.shields.io/npm/v/coutts.svg?style=flat-square
+[version-url]: https://www.npmjs.com/package/coutts
+[travis-img]: https://img.shields.io/travis/ruiquelhas/coutts.svg?style=flat-square
 [travis-url]: https://travis-ci.org/ruiquelhas/coutts
